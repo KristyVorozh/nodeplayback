@@ -14,6 +14,7 @@ app.use(cors());
 app.use("/auth", authRouter)
 app.use("/movies", movieRouter)
 app.use("/reviewsMovie", reviewMovieRouter)
+
 const start = async (req, res) => {
     try {
         await mongoose.connect(`mongodb://localhost:27017`);

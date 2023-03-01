@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const tokenDecoder = require("../utils/tokenDecoder")
+const axios = require("axios");
+
 class MoviesController {
     async getMovies (req, res) {
         try {
