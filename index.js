@@ -17,7 +17,7 @@ app.use("/reviewsMovie", reviewMovieRouter)
 
 const start = async (req, res) => {
     try {
-        await mongoose.connect(`mongodb://localhost:27017`);
+        await mongoose.connect(`mongodb+srv://kris:CQ2RycQdkc0Qh40n@cluster0.hri0ahj.mongodb.net/?retryWrites=true&w=majority`);
         const findUsername = await User.findOne({username: "review"})
         if (!findUsername) {
             const user = new User({
